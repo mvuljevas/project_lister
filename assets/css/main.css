@@ -254,7 +254,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .navbar-brand {
     background: white;
-    padding: 17px 10px;
+    padding: 12px 10px;
     font-family: 'Poppins', sans-serif;
     height: auto;
     /* background-color: transparent; */
@@ -268,7 +268,7 @@ h1,h2,h3,h4,h5,h6 {
   background: rgba(0,0,0,.2) !important;
 }
 .navbar-brand img {
-  max-height: 33px !important;
+  max-height: 45px !important;
 
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
