@@ -7,7 +7,7 @@ var $ = jQuery.noConflict();
 var showcaser = showcaser || {};
 
 (function($){
-    
+
     // USE STRICT
   "use strict";
 
@@ -16,16 +16,17 @@ var showcaser = showcaser || {};
     init: function(){
       showcaser.magic.textRotater();
       showcaser.magic.animations();
-      //showcaser.magic.customScroll();
       showcaser.magic.magnificPop();
       showcaser.magic.darkHover();
       showcaser.magic.addOns();
-    },  
+      showcaser.magic.backToTop();
+      showcaser.magic.footerYear();
+    },
 
 /* ----------------------------------------------------------------
 ↓                           Text Rotator                          ↓
 -----------------------------------------------------------------*/
-        
+
     textRotater: function(){
       if( $textRotate.length > 0 ){
         $textRotate.each(function(){
@@ -47,8 +48,8 @@ var showcaser = showcaser || {};
           });
         });
       }
-    },   
-            
+    },
+
 /* ----------------------------------------------------------------
 ↑                           Text Rotator                          ↑
 -----------------------------------------------------------------*/
@@ -56,8 +57,8 @@ var showcaser = showcaser || {};
 
 /* ----------------------------------------------------------------
 ↓                         Animate.css                             ↓
------------------------------------------------------------------*/        
-        
+-----------------------------------------------------------------*/
+
     animations: function(){
       var $dataAnim = $('[data-animate]');
       if( $dataAnim.length > 0 ){
@@ -81,34 +82,12 @@ var showcaser = showcaser || {};
           });
         //}
       }
-    },   
-        
+    },
+
 /* ----------------------------------------------------------------
 ↑                         Animate.css                             ↑
------------------------------------------------------------------*/  
-
-
-/* ----------------------------------------------------------------
-↓                           Nice Scroll                           ↓
 -----------------------------------------------------------------*/
 
- /* not used by default, firefox bug */
-  customScroll: function(){
-    if (jQuery().niceScroll) {
-      jQuery("html").niceScroll({
-        cursorcolor: 'rgba(255,255,255,.2)',
-        cursorborder: '0px',
-        cursorborderradius: '1px',
-        cursorwidth: '6px',
-        smoothscroll: false,
-        autohidemode: false
-      });
-    }      
-  },
-
-/* ----------------------------------------------------------------
-↑                           Nice Scroll                           ↑
------------------------------------------------------------------*/
 
 
 /* ----------------------------------------------------------------
@@ -126,24 +105,54 @@ var showcaser = showcaser || {};
         $( this ).find( "figcaption" ).removeClass( "fig-hover" );
         $( this ).find( ".folder-hover" ).removeClass( "i-press" );
       }
-    );     
+    );
   },
 
   addOns: function(){
     $(".image-modal").insertAfter(".star");
   },
-  
+
+  footerYear:function() {
+      var d = new Date();
+      var n = d.getFullYear();
+      // document.getElementById("demo").innerHTML = n;
+      $('#footer_year').html(n);
+  },
+
+    backToTop:function(){
+        if ($('#back-to-top').length) {
+                var scrollTrigger = 200, // px
+                backToTop = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+                backToTop();
+                $(window).on('scroll', function () {
+                    backToTop();
+                });
+                $('#back-to-top').on('click', function (e) {
+                    e.preventDefault();
+                    $('html,body').animate({
+                      scrollTop: 0
+                 }, 700);
+            });
+        }
+    },
 
 /* ----------------------------------------------------------------
 ↑                              MISC                               ↑
 -----------------------------------------------------------------*/
 
 
-   
+
 /* ----------------------------------------------------------------
 ↓                      Magnific PopUp                             ↓
------------------------------------------------------------------*/     
-    
+-----------------------------------------------------------------*/
+
     magnificPop: function(){
 
     // Images
@@ -153,7 +162,7 @@ var showcaser = showcaser || {};
         removalDelay: 500, //delay removal by X to allow out-animation
         callbacks: {
             beforeOpen: function() {
-                // just a hack that adds mfp-anim class to markup 
+                // just a hack that adds mfp-anim class to markup
                 this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
                 this.st.mainClass = this.st.el.attr('data-effect');
             }
@@ -165,9 +174,7 @@ var showcaser = showcaser || {};
 
 /* ----------------------------------------------------------------
 ↑                      Magnific PopUp                             ↑
------------------------------------------------------------------*/       
-    
-
+-----------------------------------------------------------------*/
 
   }; //magic ends
 
@@ -175,15 +182,13 @@ var showcaser = showcaser || {};
   showcaser.documentOnReady = {
     init: function(){
       showcaser.magic.init();
-    },  
-  };  
-
+    },
+  };
 
   var $window = $(window),
     $textRotate = $('.text-rotater')
-  ; 
+  ;
 
-    
   $(document).ready( showcaser.documentOnReady.init );
-    
+
 })(jQuery);

@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
     //wait until user see the button to hide it (ux purposes)
-    setTimeout(function(){ 
-       $(".frm-wrapper").addClass("hidden-tilt"); 
+    setTimeout(function(){
+       $(".frm-wrapper").addClass("hidden-tilt");
        $(".button-frame").toggleClass("frame-size");
     }, 2200);
 
@@ -11,7 +11,7 @@ $(document).ready(function() {
         $(".frm-wrapper").toggleClass("hidden-tilt");
         $(".button-frame").toggleClass("frame-size");
     });
-    
+
     //optional transition
         $(".animsition").animsition({
         inClass: 'fade-in',
@@ -59,28 +59,26 @@ $(document).ready(function() {
         overlayParentElement : 'body',
         transition: function(url){ window.location.href = url; }
     });
-   
-				
-});
 
+});
 
 //getting title from iframe
 function onLoadHandler() {
-var x;         
+    var x;
 
-//get the iframe object
-var iframe = document.getElementById('mainFrame');
-//cross browser solution to get the iframe document
-//of the iframe
-//var objectEl = iframe.contentDocument.getElementById("fw1");
+    //get the iframe object
+    var iframe = document.getElementById('mainFrame');
+    //cross browser solution to get the iframe document
+    //of the iframe
+    //var objectEl = iframe.contentDocument.getElementById("fw1");
 
-var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 
      //if the document is not undefined
     if (iframeDocument) {
        //do something with the frames dom
        //get the content of the title tag from the iframe
        x = iframeDocument.getElementsByTagName("title")[0].innerHTML;
-    }    
-    document.getElementById("metaTitle").innerHTML = x;    
+    }
+    document.getElementById("metaTitle").innerHTML = x;
 }

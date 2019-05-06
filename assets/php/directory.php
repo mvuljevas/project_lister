@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 
 //Clean URL from dots for security
 function cleanURL($string){
@@ -12,7 +11,7 @@ function cleanURL($string){
 if(isset($_GET['pathfinder'])){
 	$pathfinder = cleanURL($_GET['pathfinder'])."/";
 }else{
-	$pathfinder = "";	
+	$pathfinder = "";
 }
 
 
@@ -45,7 +44,7 @@ if ($handle = opendir($path_def)) {
                             			<i class="fa fa-arrows-alt fa-3x"></i>
                          			</div>
                      			</div>
-                				<!-- Caption Hover -->     
+                				<!-- Caption Hover -->
 
         						<img class="item-img" src="'. $showthumb .'" alt="' . $entry . '">
 								<figcaption>
@@ -56,7 +55,7 @@ if ($handle = opendir($path_def)) {
 							</a>
 						</div>
         				';
-        		}   
+        		}
 
       			//final chance, folder or nothing.
       			else {
@@ -64,11 +63,11 @@ if ($handle = opendir($path_def)) {
       				$desc = "Folder";
       				//check the existing image
 					if (file_exists($path_def.$entry."/folder-thumb.jpg")) {
-						$showthumb = $path_def.$entry."/folder-thumb.jpg"; 
-					} else if (file_exists($path_def.$entry."/folder-thumb.png")){ 
-						$showthumb = $path_def.$entry."/folder-thumb.png"; 
+						$showthumb = $path_def.$entry."/folder-thumb.jpg";
+					} else if (file_exists($path_def.$entry."/folder-thumb.png")){
+						$showthumb = $path_def.$entry."/folder-thumb.png";
 					} else {
-						$showthumb = "assets/images/folder-thumb.jpg"; 
+						$showthumb = "assets/images/folder-thumb.jpg";
 					}
         				echo'
 
@@ -82,7 +81,7 @@ if ($handle = opendir($path_def)) {
                             			<i class="fa fa-folder-open-o fa-3x" aria-hidden="true"></i>
                          			</div>
                      			</div>
-                				<!-- Caption Hover -->     
+                				<!-- Caption Hover -->
 
         						<img class="item-img" src="'. $showthumb .'" alt="' . $entry . '">
 								<figcaption>
@@ -93,7 +92,7 @@ if ($handle = opendir($path_def)) {
 							</a>
 						</div>
         				';
-        		} 
+        		}
       		}
 
       		//its a file?
@@ -102,8 +101,8 @@ if ($handle = opendir($path_def)) {
       			$file_parts = pathinfo($entry);
 
       			if( ($file_parts['extension'] == "jpg") || ($file_parts['extension'] == "jpeg") || ($file_parts['extension'] == "png") ) {
-      			
-	        		$showthumb = $path_def.$entry; 
+
+	        		$showthumb = $path_def.$entry;
 
 	        		echo '
 
@@ -118,7 +117,7 @@ if ($handle = opendir($path_def)) {
 	                                    	<i class="fa fa-picture-o fa-3x" aria-hidden="true"></i>
 	                                 	</div>
 	                             	</div>
-	                        	<!-- Caption Hover -->     
+	                        	<!-- Caption Hover -->
 
 	                				<img class="item-img" src="'. $showthumb .'" alt="' . $entry . '">
 							        <figcaption>
@@ -129,31 +128,31 @@ if ($handle = opendir($path_def)) {
 						    </a>
 
                         <!-- Modal Photo -------------------------------------------------------------- -->
- 
+
 						<div class="modal fade image-modal fileid-'. $file_id .'" tabindex="-1" role="dialog">
 						  <div class="modal-dialog" data-animate="fadeInUp">
 						    <div class="modal-content dark">
- 
+
 								<button type="button" class="close flying-btn" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
- 
+
 						    	<img src="'. $showthumb .'" alt="' . $file_parts['filename']  . '">
- 
+
 						    </div><!-- /.modal-content -->
 						  </div><!-- /.modal-dialog -->
 						</div><!-- /.modal -->
- 
+
 						<!-- Modal Photo -------------------------------------------------------------- -->
-               
-						</div>				
+
+						</div>
 
 	        		';
 	        	}
 
       			else{
 
-	        		$showthumb = "assets/images/file-thumb.jpg"; 
+	        		$showthumb = "assets/images/file-thumb.jpg";
 
 	        		echo '
 
@@ -167,7 +166,7 @@ if ($handle = opendir($path_def)) {
 	                            	<i class="fa fa-file-text-o fa-3x"></i>
 	                         	</div>
 	                     	</div>
-	                	<!-- Caption Hover -->     
+	                	<!-- Caption Hover -->
 
 	        				<img class="item-img" src="'. $showthumb .'" alt="' . $entry . '">
 							<figcaption>
@@ -184,7 +183,7 @@ if ($handle = opendir($path_def)) {
 
         }
 
-        $dataDelay +=200;
+        $dataDelay +=100;
         $file_id++;
 
         if ($dataDelay > 800){

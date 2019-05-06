@@ -1,5 +1,7 @@
 <?php
 
+require('assets/php/config.php');
+
 //setting the URL for the current DIR
 if(isset($_GET['q'])){
 	$pathfinder = base64_decode($_GET['q']);
@@ -9,7 +11,7 @@ if(isset($_GET['q'])){
 
 ?>
 <!DOCTYPE html>
-<html>
+<html class="js-frame">
 <!-- Main Header -->
 	<head>
 
@@ -46,41 +48,41 @@ if(isset($_GET['q'])){
 
 <!-- Change background here -->
 <body style="background:url(assets/images/base-wall-7.jpg) no-repeat;">
+	<!-- transition effect / animsition -->
+	<div class="animsition">
+	<!-- <div class="animsition"> -->
 
-<!-- transition effect / animsition -->
-<div class="animsition">
-<!-- <div class="animsition"> -->
+		<!-- Main Nav -->
+		<div class="button-frame">
+			<nav id="prev-nav" class="framed-nav">
 
-<!-- Main Nav -->
-<div class="button-frame">
-<nav id="prev-nav" class="framed-nav">
+			    <div class="frm-wrapper">
+			        <div class="r-frame">
+			            <a href="<?php echo $pathfinder; ?>"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> <span class="rmo-link">remove frame</span></a>
+			        </div>
 
-    <div class="frm-wrapper">
-        <div class="r-frame">
-            <a href="<?php echo $pathfinder; ?>"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> <span class="rmo-link">remove frame</span></a>
-        </div>
+			        <div id="metaTitle" class="frm-tlt"> <!-- --></div>
 
-        <div id="metaTitle" class="frm-tlt"> <!-- --></div>
+			        <a href="<?php echo $projectr_config['app_url']; ?>" class="cta-navbar anlinkate" data-toggle="modal" data-target=".bs-modal-lg">
+			            <i class="fa fa-reply" aria-hidden="true"></i>
+			            GO BACK
+			        </a>
+			        <div class="mini-btnmv"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-        <a href="index.php" class="cta-navbar anlinkate" data-toggle="modal" data-target=".bs-modal-lg">
-            <i class="fa fa-reply" aria-hidden="true"></i>
-            GO BACK
-        </a>
-        <div class="mini-btnmv"><i class="fa fa-bars" aria-hidden="true"></i></div>
+			    </div>
 
-    </div>
-
-</nav>
-</div>
-<!-- Main Nav -->
+			</nav>
+		</div>
+		<!-- Main Nav -->
 
 
-<section class="sized-frame">
-    <iframe id="mainFrame" width="100%" height="100%" frameborder="0" src="<?php echo $pathfinder; ?>" onload="onLoadHandler();"> </iframe>
-</section>
-<!-- container-fluid end -->
+		<section class="sized-frame">
+		    <iframe id="mainFrame" width="100%" height="100%" frameborder="0" src="<?php echo $pathfinder; ?>" onload="onLoadHandler();"> </iframe>
+		</section>
+		<!-- container-fluid end -->
 
-</div>
-<!-- ./animsition ends -->
+	</div>
+	<!-- ./animsition ends -->
+
 </body>
 </html>
