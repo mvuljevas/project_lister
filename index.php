@@ -177,9 +177,20 @@
 			<div class="row">
 
 				<div class="col-md-10 col-md-offset-1">
-					<div class="text-center">
-						<h2 class="with_after"> Welcome to <strong>Projectr</strong>, stranger! </h1>
-						<p>This is simple but quickly solution to showcase all your work in one place, without need to code, just putting al the folders inside projectr and it will do the rest for you, awesome right?, <a href="#">give it a try now!</a></p>
+
+					<div class="row">
+
+						<div class="col-md-3">
+							<img src="https://picsum.photos/200" alt="Profile Picture - Projectr">
+						</div>
+
+						<div class="col-md-9">
+							<div class="">
+								<h2 class="with_after"> Welcome to <strong>Projectr</strong>, stranger! </h1>
+								<p>This is simple but quickly solution to showcase all your work in one place, without need to code, just putting al the folders inside projectr and it will do the rest for you, awesome right?, <a href="#">give it a try now!</a></p>
+							</div>
+						</div>
+
 					</div>
 				</div>
 
