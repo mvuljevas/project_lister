@@ -92,7 +92,9 @@
 
 	<!-- Mid lane Text -->
 	<section class="container-fluid normalize-index">
+			<div class="logo-smooth">
 
+			</div>
 			<div class="row normalize-index">
 				<div class="container">
 
@@ -180,8 +182,11 @@
 
 					<div class="row">
 
+
 						<div class="col-md-3">
-							<img src="https://picsum.photos/200" alt="Profile Picture - Projectr">
+							<div class="">
+								<img src="https://picsum.photos/200" alt="Profile Picture - Projectr">
+							</div>
 						</div>
 
 						<div class="col-md-9">
@@ -225,26 +230,17 @@
 	 	</div>
 	 </section>
 
-
-
    	 <footer>
-
          <div class="container">
-
          	<div class="row">
   				<div class="col-xs-12">
 
-					<p class="copyright footer text-center unmargin">Copyright <span id="footer_year">2016</span> &copy; <a href="#!">ProjectLister</a>, a quick start for projects showcase and coming soon page. Created with <span class="crimson-love">&hearts;</span> by <a href="https://www.mvuljevas.design?ref=projectr" target"_blank" rel="follow">Mauricio Vuljevas</a>.</p>
-
-
+					<p class="copyright footer text-center unmargin">Copyright <span id="footer_year">2019</span> &copy; <a href="#!">Projectr</a>, a quick start for projects showcase and coming soon page. Created with <span class="crimson-love">&hearts;</span> by <a href="https://www.mvuljevas.design?ref=projectr" target"_blank" rel="follow">Mauricio Vuljevas</a>.</p>
 
 				</div>
-
 			</div>
-
          </div>
       </footer>
-
 
 	<!-- Modal Default  -->
 	<div class="modal fade bs-modal-lg" tabindex="-1" role="dialog">

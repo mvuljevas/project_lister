@@ -15,17 +15,17 @@ if(isset($_GET['q'])){
 <!-- Main Header -->
 	<head>
 
-        <!-- Meta -->
-        <title>Lister</title>
+		<!-- Meta -->
+        <title>Projectr - Project Preview</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="robots" content="noindex, nofollow">
+        <meta name="robots" content="index, follow">
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="assets/images/favicon-green.png" />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/animsition.min.css"      type="text/css" />
+        <link rel="stylesheet" href="assets/css/animsition.min.css"     type="text/css" />
         <link rel="stylesheet" href="assets/css/bootstrap.min.css"      type="text/css" />
         <link rel="stylesheet" href="assets/css/font-awesome.min.css"   type="text/css" />
         <link rel="stylesheet" href="assets/css/animate.css"            type="text/css" />
@@ -33,15 +33,7 @@ if(isset($_GET['q'])){
 
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Abel"               rel="stylesheet" type="text/css">
-		<link href='https://fonts.googleapis.com/css?family=Droid+Serif' 		rel='stylesheet' type='text/css'>
-
-        <!-- Scripts -->
-        <script src="assets/js/jquery-1.12.1.min.js"></script>
-        <script src="assets/js/animsition.min.js"></script>
-        <script src="assets/js/custom.js"></script>
-        <!-- Scripts -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Abel|Droid+Serif|Poppins:400,600,700,800" rel="stylesheet" type="text/css">
 
     </head>
 
@@ -58,7 +50,10 @@ if(isset($_GET['q'])){
 
 			    <div class="frm-wrapper">
 			        <div class="r-frame">
-			            <a href="<?php echo $pathfinder; ?>"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> <span class="rmo-link">remove frame</span></a>
+			            <a href="<?php echo $pathfinder; ?>">
+							<span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+							<span class="rmo-link">Remove Frame</span>
+						</a>
 			        </div>
 
 			        <div id="metaTitle" class="frm-tlt"> <!-- --></div>
@@ -83,6 +78,12 @@ if(isset($_GET['q'])){
 
 	</div>
 	<!-- ./animsition ends -->
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery-1.12.1.min.js"></script>
+	<script src="assets/js/animsition.min.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<!-- Scripts -->
 
 </body>
 </html>
