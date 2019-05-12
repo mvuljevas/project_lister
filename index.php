@@ -18,7 +18,13 @@
         <link rel="stylesheet" href="assets/css/animate.css"            type="text/css" />
         <link rel="stylesheet" href="assets/css/morphext.css"           type="text/css" />
         <link rel="stylesheet" href="assets/css/magnific-popup.css"     type="text/css" />
-        <link rel="stylesheet" href="assets/css/main.css"               type="text/css" />
+
+		<!-- color schema -->
+		<!-- <link rel="stylesheet" href="assets/css/_blue.css"               type="text/css" /> -->
+		<link rel="stylesheet" href="assets/css/_crimson.css"            type="text/css" />
+
+		<!-- core styles -->
+		<link rel="stylesheet" href="assets/css/main.css"                type="text/css" />
 
         <!-- Fonts -->
         <link rel="stylesheet" href="assets/css/font-awesome.min.css"   type="text/css" />
@@ -92,9 +98,7 @@
 
 	<!-- Mid lane Text -->
 	<section class="container-fluid normalize-index">
-			<div class="logo-smooth">
 
-			</div>
 			<div class="row normalize-index">
 				<div class="container">
 
@@ -180,23 +184,30 @@
 
 				<div class="col-md-10 col-md-offset-1">
 
-					<div class="row">
+					<div class="home_vone-profile_wrapper">
 
+						<div class="row">
 
-						<div class="col-md-3">
-							<div class="">
-								<img src="https://picsum.photos/200" alt="Profile Picture - Projectr">
+							<div class="col-md-3">
+								<div class="home_vone-avatar_wrapper">
+									<img src="https://picsum.photos/200" alt="Profile Picture - Projectr">
+								</div>
 							</div>
-						</div>
 
-						<div class="col-md-9">
-							<div class="">
-								<h2 class="with_after"> Welcome to <strong>Projectr</strong>, stranger! </h1>
-								<p>This is simple but quickly solution to showcase all your work in one place, without need to code, just putting al the folders inside projectr and it will do the rest for you, awesome right?, <a href="#">give it a try now!</a></p>
+							<div class="col-md-9">
+								<div class="home_vone-info_wrapper">
+									<h2 class="with_after"> Welcome to <strong>Projectr</strong>, stranger! </h1>
+									<p>This is simple but quickly solution to showcase all your work in one place, without need to code, just putting al the folders inside projectr and it will do the rest for you, awesome right?, <a href="#">give it a try now!</a></p>
+								</div>
 							</div>
-						</div>
 
+						</div>
 					</div>
+
+
+
+
+
 				</div>
 
 			</div>
@@ -230,17 +241,26 @@
 	 	</div>
 	 </section>
 
+
+
    	 <footer>
+
          <div class="container">
+
          	<div class="row">
   				<div class="col-xs-12">
 
-					<p class="copyright footer text-center unmargin">Copyright <span id="footer_year">2019</span> &copy; <a href="#!">Projectr</a>, a quick start for projects showcase and coming soon page. Created with <span class="crimson-love">&hearts;</span> by <a href="https://www.mvuljevas.design?ref=projectr" target"_blank" rel="follow">Mauricio Vuljevas</a>.</p>
+					<p class="copyright footer text-center unmargin">Copyright <span id="footer_year">2016</span> &copy; <a href="#!">ProjectLister</a>, a quick start for projects showcase and coming soon page. Created with <span class="crimson-love">&hearts;</span> by <a href="https://www.mvuljevas.design?ref=projectr" target"_blank" rel="follow">Mauricio Vuljevas</a>.</p>
+
+
 
 				</div>
+
 			</div>
+
          </div>
       </footer>
+
 
 	<!-- Modal Default  -->
 	<div class="modal fade bs-modal-lg" tabindex="-1" role="dialog">
